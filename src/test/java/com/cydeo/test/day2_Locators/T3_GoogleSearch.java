@@ -15,7 +15,7 @@ public class T3_GoogleSearch {
         driver.get("https://google.com/ ");
         WebElement inputBox= driver.findElement(By.name("q"));
         Thread.sleep(3000);
-        inputBox.sendKeys("Apple");
+        inputBox.sendKeys("apple");
         WebElement searchButton= driver.findElement(By.name("btnK"));
         Thread.sleep(3000);
         searchButton.click();
@@ -28,6 +28,7 @@ public class T3_GoogleSearch {
         }else{
             System.out.println("Failed");
         }
+        Thread.sleep(3000);
         driver.quit();
 
     }
