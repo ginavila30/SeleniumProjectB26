@@ -24,5 +24,7 @@ public class T4_RadioButtonPractice {
         WebElement radioButtonHockey= driver.findElement(By.xpath("//input[@id=\"hockey\"]"));
         radioButtonHockey.click();
         System.out.println(radioButtonHockey.isSelected() ? "passed" : "failed");
+        WebElement greenButton = driver.findElement(By.xpath("//input[@id=\"green\"]"));
+        System.out.println("Is green button enabled? "+greenButton.isEnabled());
     }
 }
