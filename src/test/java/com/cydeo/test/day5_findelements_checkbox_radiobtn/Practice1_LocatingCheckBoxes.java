@@ -1,4 +1,4 @@
-package com.cydeo.test.day5;
+package com.cydeo.test.day5_findelements_checkbox_radiobtn;
 
 import com.cydeo.test.Utilities.WebDriverFactory;
 import org.openqa.selenium.By;
