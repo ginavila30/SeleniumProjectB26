@@ -30,18 +30,20 @@ public class T4_RadioButton2 {
 
         clickAndVerifyRadioButton(driver,"sport","hockey");
 
+
+
         driver.quit();
 
     }
 
     public static void clickAndVerifyRadioButton(WebDriver driver, String nameAttribute, String idAttribute) {
-        driver.get("https://practice.cydeo.com/radio_buttons");
-        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+//        driver.get("https://practice.cydeo.com/radio_buttons");
+//        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         List<WebElement> list = driver.findElements(By.xpath("//input[@name=\"" + nameAttribute + "\"]"));
         for (WebElement element : list) {
             if (element.getAttribute("id").equals(idAttribute)) {
                 element.click();
-                System.out.println("Is the element selected?"+element.isSelected());
+                System.out.println("Is the element selected? "+element.isSelected());
                 break;
             }
         }
