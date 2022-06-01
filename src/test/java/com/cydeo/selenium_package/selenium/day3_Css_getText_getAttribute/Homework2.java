@@ -13,7 +13,7 @@ public class Homework2 {
         loginBox.sendKeys("incorrect");
         WebElement resetPasswordButton= driver.findElement(By.cssSelector("button[value='Reset password']"));
         resetPasswordButton.click();
-        WebElement errorMessage= driver.findElement(By.cssSelector("div.errortext"));
+        WebElement errorMessage= driver.findElement(By.cssSelector(".errortext"));
         String expectedText="Login or E-mail not found";
         String actualText =errorMessage.getText();
         System.out.println(actualText);

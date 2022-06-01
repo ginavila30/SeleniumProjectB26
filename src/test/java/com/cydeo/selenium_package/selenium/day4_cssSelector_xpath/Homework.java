@@ -17,7 +17,8 @@ Expected: “Your e-mail’s been sent!”  */
 public class Homework {
     public static void main(String[] args) {
         WebDriver driver = WebDriverFactory.getDriver("chrome");
-        driver.get("http://practice.cydeo.com/forgot_password");
+        driver.get("" +
+                "");
         WebElement emailInputBox= driver.findElement(By.xpath("//input[@name='email']")); //CSS option input -> [name='email']
         emailInputBox.sendKeys("ginavila30@hotmail.com");
         WebElement retrievePasswordBtn= driver.findElement(By.cssSelector("button#form_submit"));//xpath option -> //button[@id='form_submit']

@@ -16,13 +16,15 @@ public class Homework1 {
         System.out.println(actualText.equals(expectedText)?"Passed":"Failed");
 
         WebElement forgotPasswordButton=driver.findElement(By.cssSelector("a[class='login-link-forgot-pass']"));
-        expectedText=forgotPasswordButton.getText();
-        actualText="Forgot your password?";
+        expectedText="Forgot your password?";
+        actualText=forgotPasswordButton.getText();
         System.out.println(actualText.equals(expectedText)?"Passed":"Failed");
 
         String expectedAttributeValue="forgot_password=yes";
         String actualAttributeValue= forgotPasswordButton.getAttribute("href");
         System.out.println(actualAttributeValue.contains(expectedAttributeValue)?"Passed":"Failed");
+
+        driver.quit();
 
 
 
