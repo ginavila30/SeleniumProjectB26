@@ -2,7 +2,7 @@ package com.cydeo.tests.shortvideos;
 
 import org.testng.annotations.*;
 
-import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.*;
 
 public class P01_TestNG_Intro {
     @Test(priority = 2) // I can decide the priority of the cases to run. When priority not specified, it goes by alphabetic order of the method name.
@@ -15,6 +15,8 @@ public class P01_TestNG_Intro {
     public void testTenMinusFour(){
         System.out.println("***** Test ten minus 4 running");
         assertEquals(10-4,6);
+        assertTrue(2%2==0,"it fails");// message is displayed only when it fails
+       // fail(); -> fails test intentionally
     }
 
     @BeforeClass
