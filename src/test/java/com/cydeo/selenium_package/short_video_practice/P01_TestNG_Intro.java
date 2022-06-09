@@ -1,4 +1,4 @@
-package com.cydeo.tests.shortvideos;
+package com.cydeo.selenium_package.short_video_practice;
 
 import org.testng.annotations.*;
 

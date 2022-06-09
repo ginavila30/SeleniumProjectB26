@@ -1,4 +1,4 @@
-package com.cydeo.selenium_package.Utilities;
+package com.cydeo.selenium_package.selenium.day4_cssSelector_xpath;
 
 import org.openqa.selenium.WebElement;
 

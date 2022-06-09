@@ -1,4 +1,4 @@
-package com.cydeo.selenium_package.Utilities;
+package com.cydeo.selenium_package.selenium.day3_Css_getText_getAttribute;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;

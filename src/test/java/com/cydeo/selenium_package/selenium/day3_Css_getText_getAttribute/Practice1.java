@@ -1,6 +1,5 @@
 package com.cydeo.selenium_package.selenium.day3_Css_getText_getAttribute;
 
-import com.cydeo.selenium_package.Utilities.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 

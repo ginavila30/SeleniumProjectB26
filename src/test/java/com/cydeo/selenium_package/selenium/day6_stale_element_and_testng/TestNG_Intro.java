@@ -28,7 +28,7 @@ public class TestNG_Intro {
         String expected = "apple";
         Assert.assertEquals(actual,expected,"Test 1 did not passed");
     }
-@Test(priority=1)
+@Test(priority=1, dependsOnMethods = "test1")
     public void test2(){
         System.out.println("Test2 is running....");
         Assert.assertEquals("orange","orange","Test 2 did not pass");

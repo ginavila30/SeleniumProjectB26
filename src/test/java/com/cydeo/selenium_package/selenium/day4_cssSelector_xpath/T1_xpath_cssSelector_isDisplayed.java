@@ -10,7 +10,6 @@ e. “Retrieve password” button
 f. “Powered by Cydeo text
 4. Verify all web elements are displayed.*/
 
-import com.cydeo.selenium_package.Utilities.Methods;
 import com.cydeo.selenium_package.Utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
