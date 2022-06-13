@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 
 public class WebDriverFactory {
     /*
-    *  TASK: NEW METHOD CREATION
+    *
 // Method name : getDriver
 // Static method
 // Accepts String arg: browserType
