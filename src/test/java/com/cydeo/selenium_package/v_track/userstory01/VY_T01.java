@@ -12,6 +12,7 @@ import org.testng.annotations.Test;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /*Given that user is logged in as a truck driver user
 And user is on the home page
@@ -60,9 +61,10 @@ DATE)"*/
         String expectedTitle= "Vehicle Costs - Entities - System - Car - Entities - System";
         Assert.assertEquals(actualTitle,expectedTitle);
         List<WebElement>list=driver.findElements(By.xpath("//a[@class=\"grid-header-cell__link\"]"));
-        ArrayList<String>expectedList=new ArrayList<>(Arrays.asList("TYPE","TOTAL PRICE","DATE"));
+        List<String>list2=list.stream().map(WebElement::getText).collect(Collectors.toList());
+        List<String>expectedList=Arrays.asList("TYPE","TOTAL PRICE","DATE");
         for (int i = 0; i < list.size() ; i++) {
-            Assert.assertEquals(list.get(i).getText(),expectedList.get(i));
+            Assert.assertEquals(list2.get(i),expectedList.get(i));
         }
 
     }
