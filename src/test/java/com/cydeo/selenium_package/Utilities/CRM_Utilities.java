@@ -6,11 +6,11 @@ import org.openqa.selenium.WebElement;
 
 public class CRM_Utilities {
     public static   void login_crm(WebDriver driver){
-        driver.get("https://login2.nextbasecrm.com/");
+        driver.get(ConfigurationReader.getProperty("env"));
         WebElement userNameInput = driver.findElement(By.xpath("//input[@class=\"login-inp\"] [@name=\"USER_LOGIN\"]"));
-        userNameInput.sendKeys("marketing25@cybertekschool.com");
+        userNameInput.sendKeys(ConfigurationReader.getProperty("username"));
         WebElement passwordInput = driver.findElement(By.name("USER_PASSWORD"));
-        passwordInput.sendKeys("UserUser");
+        passwordInput.sendKeys(ConfigurationReader.getProperty("password"));
         WebElement logInBtn = driver.findElement(By.xpath("//input[@type=\"submit\"]"));
         logInBtn.click();
     }

@@ -19,9 +19,9 @@ public class Nadir extends TestBase {
         System.out.println(links.size());
         for (WebElement each:links) {
             try{
-            each.click();
-            String title = driver.findElement(By.xpath("//h1[@align=\"center\"]")).getText();
-            Assert.assertTrue(title.contains(expectedTitle));
+                each.click();
+                String title = driver.findElement(By.xpath("//h1[@align=\"center\"]")).getText();
+                Assert.assertTrue(title.contains(expectedTitle));
             }catch(Exception e){
                 System.out.println(each+"->Link does not work");
             }
