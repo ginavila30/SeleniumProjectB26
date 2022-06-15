@@ -3,7 +3,6 @@ package com.cydeo.selenium_package.selenium.day11_webtables_utilities;
 import com.cydeo.base.TestBase;
 import com.cydeo.selenium_package.Utilities.Driver;
 import com.cydeo.selenium_package.Utilities.SmartBearUtils;
-import com.cydeo.selenium_package.short_video_practice.JavaFaker;
 import com.github.javafaker.CreditCardType;
 import com.github.javafaker.Faker;
 import org.openqa.selenium.By;
@@ -14,7 +13,6 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.util.Date;
 import java.util.List;
 
 public class ExtraPractice extends TestBase {
@@ -160,7 +158,8 @@ Expected: 109 */
             WebDriver driver = Driver.getDriver();
             driver.get("https://www.openxcell.com");
             List<WebElement> links = driver.findElements(By.tagName("a"));
-            int count = 0;
+
+           int count = 0;
 
             for (WebElement each : links) {
                 try {

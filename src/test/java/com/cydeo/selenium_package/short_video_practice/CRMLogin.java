@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-public class CRMLogin {
+ public class CRMLogin {
     @Test
     public void login_crm() {
         WebDriver driver = Driver.getDriver();
