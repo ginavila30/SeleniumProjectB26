@@ -22,7 +22,7 @@ Method info:
 public class BrowserUtils {
 //Verification of a page title
     public static void verifyTitle(WebDriver driver, String expectedTitle){
-        Assert.assertEquals(driver.getTitle(),expectedTitle,expectedTitle+" Title verification failed");
+        Assert.assertTrue(driver.getTitle().contains(expectedTitle)," Title verification failed");
     }
 //Switching to an specific window and verifying title and url is the expected one
     public static void switchWindowAndVerify(WebDriver driver, String expectedUrl,String expectedTitle){

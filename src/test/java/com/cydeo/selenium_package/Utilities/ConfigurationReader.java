@@ -5,8 +5,8 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class ConfigurationReader {
-    private static  Properties properties = new Properties();
-   static {
+    private static  Properties properties = new Properties();// not accessible out of the class directly, but the method get.properties() accessible outside by the public static method getProperty() created in line 21
+   static { //Everytime configurationReader will be loaded or called this static block will run first thing one time. So file will be loaded in to properties right away and later with a public getter method( ) line 21 I can gerProperty(key);
        try {
            FileInputStream file = new FileInputStream("configuration.properties");// accepts the path, you can get it
            // by right click on the .priotities file and path from content root. FileInputStream designed to throw

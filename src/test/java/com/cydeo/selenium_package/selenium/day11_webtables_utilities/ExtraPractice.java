@@ -87,18 +87,19 @@ http://secure.smartbearsoftware.com/samples/testcomplete12/WebOrders/login.aspx
         WebElement state = driver.findElement(By.xpath("//input[@id=\"ctl00_MainContent_fmwOrder_TextBox4\"]"));
         state.sendKeys(faker.address().state());
         WebElement zipcode = driver.findElement(By.xpath("//input[@id=\"ctl00_MainContent_fmwOrder_TextBox5\"] "));
-        zipcode.sendKeys(faker.address().zipCode());
+        zipcode.sendKeys(faker.address().zipCode().replace("-",""));
         WebElement visaBtn = driver.findElement(By.xpath("//input[@id=\"ctl00_MainContent_fmwOrder_cardList_0\"]"));
         visaBtn.click();
         WebElement cardNum = driver.findElement(By.xpath("//input[@id=\"ctl00_MainContent_fmwOrder_TextBox6\"]"));
-        cardNum.sendKeys(faker.finance().creditCard(CreditCardType.VISA));
+        cardNum.sendKeys(faker.finance().creditCard(CreditCardType.VISA).replace("-",""));
         WebElement date = driver.findElement(By.xpath("//input[@id=\"ctl00_MainContent_fmwOrder_TextBox1\"]"));
         date.sendKeys("12/26");
         WebElement processBtn = driver.findElement(By.xpath("//a[@id=\"ctl00_MainContent_fmwOrder_InsertButton\"]"));
         processBtn.click();
         WebElement msg = driver.findElement(By.xpath("//strong[contains(.,\"New order has been successfully added.\")]"));
         Assert.assertEquals(msg.getText(),"New order has been successfully added.");
-        Driver.closeDriver();
+        System.out.println(driver.findElement(By.xpath("//div[@class=\"buttons_process\"]//strong")).getText());
+
     }
     /*TC#3: Smartbear software order verification
 1. Open browser and login to Smartbear software

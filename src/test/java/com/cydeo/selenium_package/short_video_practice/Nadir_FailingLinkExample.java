@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
-public class Nadir extends TestBase {
+public class Nadir_FailingLinkExample extends TestBase {
     @Test
     public void interviewQ() throws InterruptedException {
         driver.get("http://te.dev.secureci.com/Exercise1.html");
