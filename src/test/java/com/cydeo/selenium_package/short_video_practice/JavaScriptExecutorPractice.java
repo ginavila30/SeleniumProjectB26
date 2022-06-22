@@ -6,6 +6,8 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
+import java.util.Set;
+
 public class JavaScriptExecutorPractice {
     @Test(priority = 2)
     public void scrollingTest() {
@@ -26,10 +28,25 @@ public class JavaScriptExecutorPractice {
         for (int i = 0; i < 10; i++) {
             jse.executeScript("window.scrollBy(0,100)");
         }
+        Driver.closeDriver();
 
     }
 
     @Test
-    public void scrollIntoView() {
+    public void openNewTab()  {
+        Driver.getDriver().get("https://practice.cydeo.com/");//Driver.getDriver().get(ConfigurationReader.getProperty("url"))
+        JavascriptExecutor js= (JavascriptExecutor) Driver.getDriver();
+        js.executeScript("window.open('https://facebook.com','_blank')");
+        js.executeScript("window.open('https://etsy.com','_blank')");
+
+        Set<String> windows = Driver.getDriver().getWindowHandles();
+        for (String window : windows) {
+            Driver.getDriver().switchTo().window(window);
+            System.out.println(Driver.getDriver().getTitle());
+            if(!Driver.getDriver().getTitle().contains("Practice")){
+                Driver.getDriver().close();
+            }
+        }
+
     }
 }
