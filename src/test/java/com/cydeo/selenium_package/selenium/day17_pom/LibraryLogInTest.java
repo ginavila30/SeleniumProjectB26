@@ -1,4 +1,4 @@
-package com.cydeo.selenium_package.short_video_practice;
+package com.cydeo.selenium_package.selenium.day17_pom;
 
 import com.cydeo.pages.LibraryLoginPage;
 import com.cydeo.selenium_package.Utilities.ConfigurationReader;
