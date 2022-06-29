@@ -25,7 +25,9 @@ public class DragAndDropWithPom {
         Actions actions = new Actions(Driver.getDriver());
         actions.clickAndHold(obj.smallCir).moveToElement(obj.bigCir).release().perform();
         Assert.assertEquals(obj.bigCir.getText(), "You did great!");
-      //  Driver.closeDriver();
+        Driver.getDriver().navigate().refresh();
+        System.out.println(obj.bigCir.getText());
+        //  Driver.closeDriver();
     }
 
     /*
